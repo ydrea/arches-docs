@@ -82,7 +82,7 @@ Redis can serve as an alternative to RabbitMQ, but it lacks official Windows sup
 1. Follow the above directions (steps 1 to 5) for setting up supervisored, celery, and their configurations
 2. Install Redis (see: https://redis.io/docs/getting-started/)
 3. Install the Python interface to Redis into your Arches virtual environment with ``pip``: ``pip install redis``
-4. Configure the `CELERY_BROKER_URL` (in `settings.py` or overwritten in `settings_local.py`): ``CELERY_BROKER_URL = "redis://@localhost:6379/0"``
+4. Configure the `CELERY_BROKER_URL` (in `settings.py` or overwritten in `settings_local.py`): ``CELERY_BROKER_URL = "redis://localhost:6379/0"``
 5. Activate Redis: ``redis-server``
 6. Run ``supervisord -c /etc/supervisor/my_proj_name-supervisord.conf`` to start the supervisord and celery workers
 7. Start Arches
